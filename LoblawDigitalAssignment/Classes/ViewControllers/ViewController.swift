@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     @objc func onDataFetchFailure() {
         self.newsTable.reloadData()
         LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: true)
-        AlertControllerUtil.showAlert(viewController: self, title: "Alert", message: "Sorry, we cound not fetch your data.")
+        AlertControllerUtil.showAlert(viewController: self, title: Constants.DATA_FETCH_ERROR_TITLE, message: Constants.DATA_FETCH_ERROR_MESSAGE)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     private func getDefaultCell(title : String) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: .default, reuseIdentifier: Constants.DEFAULT_CELL)
         cell.textLabel?.text = title;
         cell.textLabel?.numberOfLines = 0
         return cell

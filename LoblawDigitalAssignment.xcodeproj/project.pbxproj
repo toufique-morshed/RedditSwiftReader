@@ -105,7 +105,6 @@
 			children = (
 				93AB2959246B502A002432C0 /* StoryBoards */,
 				93AB2958246B5023002432C0 /* Resources */,
-				93AB2957246B5013002432C0 /* Library */,
 				93AB2956246B5009002432C0 /* Classes */,
 				93AB293F246B42B2002432C0 /* AppDelegate.swift */,
 				93AB2941246B42B2002432C0 /* SceneDelegate.swift */,
@@ -128,13 +127,6 @@
 				93AB295A246B504F002432C0 /* ViewControllers */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		93AB2957246B5013002432C0 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Library;
 			sourceTree = "<group>";
 		};
 		93AB2958246B5023002432C0 /* Resources */ = {
@@ -166,8 +158,8 @@
 		93AB295B246B5059002432C0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93AB29A5246C9CF0002432C0 /* DataModels */,
 				93AB2966246B5885002432C0 /* Network */,
-				93AB298F246BD51E002432C0 /* LDANewsDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +191,6 @@
 		93AB2966246B5885002432C0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				93AB2973246B6B34002432C0 /* Base */,
 				93AB2968246B589B002432C0 /* Response */,
 				93AB2967246B5894002432C0 /* Request */,
 				93AB296B246B5C4C002432C0 /* APIs.swift */,
@@ -211,8 +202,8 @@
 		93AB2967246B5894002432C0 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				93AB29A4246C9CC3002432C0 /* Base */,
 				93AB296F246B61D8002432C0 /* LDARedditRequest.swift */,
-				93AB297E246BA233002432C0 /* LDARequestable.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -220,6 +211,7 @@
 		93AB2968246B589B002432C0 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				93AB2973246B6B34002432C0 /* Base */,
 				93AB2969246B599F002432C0 /* LDARedditResponse.swift */,
 			);
 			path = Response;
@@ -272,6 +264,22 @@
 				93AB299E246C8CC8002432C0 /* String+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93AB29A4246C9CC3002432C0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93AB297E246BA233002432C0 /* LDARequestable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		93AB29A5246C9CF0002432C0 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				93AB298F246BD51E002432C0 /* LDANewsDetails.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		AF265548FC222DA2400ACB3A /* Pods */ = {
