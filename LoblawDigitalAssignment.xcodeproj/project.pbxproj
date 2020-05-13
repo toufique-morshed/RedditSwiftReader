@@ -30,6 +30,7 @@
 		93AB299F246C8CC8002432C0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB299E246C8CC8002432C0 /* String+.swift */; };
 		93AB29A3246C9684002432C0 /* AlertControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB29A2246C9684002432C0 /* AlertControllerUtil.swift */; };
 		93AB29A7246C9F25002432C0 /* LDANewsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB29A6246C9F25002432C0 /* LDANewsDetails.swift */; };
+		93AB29A9246CA272002432C0 /* lblogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB29A8246CA272002432C0 /* lblogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		93AB299E246C8CC8002432C0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		93AB29A2246C9684002432C0 /* AlertControllerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUtil.swift; sourceTree = "<group>"; };
 		93AB29A6246C9F25002432C0 /* LDANewsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDANewsDetails.swift; sourceTree = "<group>"; };
+		93AB29A8246CA272002432C0 /* lblogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lblogo.png; path = ../../../../../../Downloads/lblogo.png; sourceTree = "<group>"; };
 		EBF68A08B5C19039BDC2A71E /* Pods-LoblawDigitalAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoblawDigitalAssignment.debug.xcconfig"; path = "Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		F4CC30C7886313F02C3A51F4 /* Pods_LoblawDigitalAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoblawDigitalAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -253,6 +255,7 @@
 		93AB2994246C7FCA002432C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				93AB29A8246CA272002432C0 /* lblogo.png */,
 				93AB2996246C82CB002432C0 /* Images.xcassets */,
 			);
 			path = Images;
@@ -353,6 +356,7 @@
 			files = (
 				93AB294C246B42B4002432C0 /* LaunchScreen.storyboard in Resources */,
 				93AB2997246C82CB002432C0 /* Images.xcassets in Resources */,
+				93AB29A9246CA272002432C0 /* lblogo.png in Resources */,
 				93AB2961246B5319002432C0 /* API.plist in Resources */,
 				93AB2949246B42B4002432C0 /* Assets.xcassets in Resources */,
 				93AB2947246B42B2002432C0 /* Main.storyboard in Resources */,
