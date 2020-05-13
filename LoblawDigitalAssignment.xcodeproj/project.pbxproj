@@ -27,6 +27,9 @@
 		93AB298E246BCC23002432C0 /* LDANewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB298D246BCC23002432C0 /* LDANewsDetailsViewController.swift */; };
 		93AB2990246BD51E002432C0 /* LDANewsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB298F246BD51E002432C0 /* LDANewsDetails.swift */; };
 		93AB2993246C5B71002432C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2992246C5B71002432C0 /* Constants.swift */; };
+		93AB2997246C82CB002432C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93AB2996246C82CB002432C0 /* Images.xcassets */; };
+		93AB299F246C8CC8002432C0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB299E246C8CC8002432C0 /* String+.swift */; };
+		93AB29A3246C9684002432C0 /* AlertControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB29A2246C9684002432C0 /* AlertControllerUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		93AB298D246BCC23002432C0 /* LDANewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDANewsDetailsViewController.swift; sourceTree = "<group>"; };
 		93AB298F246BD51E002432C0 /* LDANewsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDANewsDetails.swift; sourceTree = "<group>"; };
 		93AB2992246C5B71002432C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93AB2996246C82CB002432C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		93AB299E246C8CC8002432C0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		93AB29A2246C9684002432C0 /* AlertControllerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUtil.swift; sourceTree = "<group>"; };
 		EBF68A08B5C19039BDC2A71E /* Pods-LoblawDigitalAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoblawDigitalAssignment.debug.xcconfig"; path = "Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		F4CC30C7886313F02C3A51F4 /* Pods_LoblawDigitalAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoblawDigitalAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +119,7 @@
 		93AB2956246B5009002432C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				93AB299D246C8CB8002432C0 /* Extensions */,
 				93AB2991246C5B45002432C0 /* Constants */,
 				93AB298A246BC7EE002432C0 /* Views */,
 				93AB297B246B92BC002432C0 /* Util */,
@@ -133,6 +140,7 @@
 		93AB2958246B5023002432C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				93AB2994246C7FCA002432C0 /* Images */,
 				93AB295E246B52D7002432C0 /* api */,
 			);
 			path = Resources;
@@ -229,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				93AB297C246B92D0002432C0 /* LDAProgressHudUtil.swift */,
+				93AB29A2246C9684002432C0 /* AlertControllerUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -247,6 +256,22 @@
 				93AB2992246C5B71002432C0 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		93AB2994246C7FCA002432C0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2996246C82CB002432C0 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		93AB299D246C8CB8002432C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93AB299E246C8CC8002432C0 /* String+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AF265548FC222DA2400ACB3A /* Pods */ = {
@@ -319,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93AB294C246B42B4002432C0 /* LaunchScreen.storyboard in Resources */,
+				93AB2997246C82CB002432C0 /* Images.xcassets in Resources */,
 				93AB2961246B5319002432C0 /* API.plist in Resources */,
 				93AB2949246B42B4002432C0 /* Assets.xcassets in Resources */,
 				93AB2947246B42B2002432C0 /* Main.storyboard in Resources */,
@@ -385,8 +411,10 @@
 				93AB296A246B599F002432C0 /* LDARedditResponse.swift in Sources */,
 				93AB2970246B61D8002432C0 /* LDARedditRequest.swift in Sources */,
 				93AB297F246BA233002432C0 /* LDARequestable.swift in Sources */,
+				93AB29A3246C9684002432C0 /* AlertControllerUtil.swift in Sources */,
 				93AB2993246C5B71002432C0 /* Constants.swift in Sources */,
 				93AB298E246BCC23002432C0 /* LDANewsDetailsViewController.swift in Sources */,
+				93AB299F246C8CC8002432C0 /* String+.swift in Sources */,
 				93AB296C246B5C4C002432C0 /* APIs.swift in Sources */,
 				93AB2942246B42B2002432C0 /* SceneDelegate.swift in Sources */,
 			);
@@ -535,6 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoblawDigitalAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoblawDigitalAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

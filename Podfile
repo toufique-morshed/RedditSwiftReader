@@ -11,5 +11,6 @@ target 'LoblawDigitalAssignment' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'PubNub', '~> 4'
   pod 'ObjectMapper', '~> 3.5'
+  pod 'SDWebImage', '~> 5.0'
 
 end

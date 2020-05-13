@@ -16,4 +16,5 @@ class Constants {
     static let IMAGE_DOWNLOAD_SUCCESS = "imageDownloadSuccess"
     static let IMAGE_DOWNLOAD_FAILED = "imageDownloadFailed"
     static let DEFAULT_IMAGE_LINK = "self"
+    static let PLACEHOLDER_IMAGE = "placeholder"
 }

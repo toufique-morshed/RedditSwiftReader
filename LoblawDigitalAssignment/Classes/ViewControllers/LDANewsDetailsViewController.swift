@@ -26,16 +26,11 @@ class LDANewsDetailsViewController: UIViewController {
         self.title = navigationTitle
         self.newsDetails.text = newDetailsText + newDetailsText + newDetailsText + newDetailsText;
         if let imageUrl = self.imageUrl {
-            //TODO: load image
+            self.newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: Constants.PLACEHOLDER_IMAGE))
         } else {
             self.newsImage.removeFromSuperview()
         }
-        
-        
     }
-    
-
-    
 
     /*
     // MARK: - Navigation

@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class ViewController: UIViewController {
     
     var newsDetails = [LDANewsDetails]()
     var redditListviewModel: LDARedditListViewModel?
-    var thumbnailImages = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @objc func onDataFetchFailure() {
         self.newsTable.reloadData()
         LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: true)
+        AlertControllerUtil.showAlert(viewController: self, title: "Alert", message: "Sorry, we cound not fetch your data.")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,9 +73,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if let imageURL = self.newsDetails[indexPath.row].thumbnail {
-            if imageURL != Constants.DEFAULT_IMAGE_LINK {
+            if imageURL.isValidURL {
                 let cell = (newsTable.dequeueReusableCell(withIdentifier: Constants.NEWS_CELL, for: indexPath) as? LDANewsTableViewCell)!
                 cell.newsTitle.text = newsDetails[indexPath.row].title!
+                cell.newsThumbnail.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: Constants.PLACEHOLDER_IMAGE))
                 return cell
             }
         }
@@ -82,15 +84,19 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let detailVC = (storyboard?.instantiateViewController(identifier: Constants.DETAILS_VIEW_CONTROLLER_ID) as? LDANewsDetailsViewController)!
+        
         detailVC.newDetailsText = ""
         if let newsBody = self.newsDetails[indexPath.row].body?.replacingOccurrences(of: "\n", with: " ") {
             detailVC.newDetailsText = newsBody
         }
+        
         if let imageUrl = self.newsDetails[indexPath.row].thumbnail {
-            detailVC.imageUrl = imageUrl != Constants.DEFAULT_IMAGE_LINK ? imageUrl : nil
+            detailVC.imageUrl = imageUrl.isValidURL ? imageUrl : nil
         }
         detailVC.navigationTitle = self.newsDetails[indexPath.row].title!
+        
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
