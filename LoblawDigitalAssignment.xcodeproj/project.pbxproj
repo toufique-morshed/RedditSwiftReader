@@ -14,6 +14,16 @@
 		93AB2947246B42B2002432C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB2945246B42B2002432C0 /* Main.storyboard */; };
 		93AB2949246B42B4002432C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93AB2948246B42B4002432C0 /* Assets.xcassets */; };
 		93AB294C246B42B4002432C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB294A246B42B4002432C0 /* LaunchScreen.storyboard */; };
+		93AB2961246B5319002432C0 /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93AB2960246B5319002432C0 /* API.plist */; };
+		93AB296A246B599F002432C0 /* LDARedditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2969246B599F002432C0 /* LDARedditResponse.swift */; };
+		93AB296C246B5C4C002432C0 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB296B246B5C4C002432C0 /* APIs.swift */; };
+		93AB296E246B5FEF002432C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB296D246B5FEF002432C0 /* NetworkManager.swift */; };
+		93AB2970246B61D8002432C0 /* LDARedditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB296F246B61D8002432C0 /* LDARedditRequest.swift */; };
+		93AB2975246B6B45002432C0 /* LDAParameterizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2974246B6B45002432C0 /* LDAParameterizable.swift */; };
+		93AB2977246B8B95002432C0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2976246B8B95002432C0 /* Article.swift */; };
+		93AB2979246B907C002432C0 /* LDARequestableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2978246B907C002432C0 /* LDARequestableViewModel.swift */; };
+		93AB297D246B92D0002432C0 /* LDAProgressHudUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB297C246B92D0002432C0 /* LDAProgressHudUtil.swift */; };
+		93AB297F246BA233002432C0 /* LDARequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB297E246BA233002432C0 /* LDARequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		93AB2948246B42B4002432C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93AB294B246B42B4002432C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93AB294D246B42B4002432C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93AB2960246B5319002432C0 /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
+		93AB2969246B599F002432C0 /* LDARedditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDARedditResponse.swift; sourceTree = "<group>"; };
+		93AB296B246B5C4C002432C0 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		93AB296D246B5FEF002432C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		93AB296F246B61D8002432C0 /* LDARedditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDARedditRequest.swift; sourceTree = "<group>"; };
+		93AB2974246B6B45002432C0 /* LDAParameterizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDAParameterizable.swift; sourceTree = "<group>"; };
+		93AB2976246B8B95002432C0 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		93AB2978246B907C002432C0 /* LDARequestableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDARequestableViewModel.swift; sourceTree = "<group>"; };
+		93AB297C246B92D0002432C0 /* LDAProgressHudUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDAProgressHudUtil.swift; sourceTree = "<group>"; };
+		93AB297E246BA233002432C0 /* LDARequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDARequestable.swift; sourceTree = "<group>"; };
 		EBF68A08B5C19039BDC2A71E /* Pods-LoblawDigitalAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoblawDigitalAssignment.debug.xcconfig"; path = "Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		F4CC30C7886313F02C3A51F4 /* Pods_LoblawDigitalAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoblawDigitalAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +107,7 @@
 		93AB2956246B5009002432C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				93AB297B246B92BC002432C0 /* Util */,
 				93AB295C246B5071002432C0 /* ViewModels */,
 				93AB295B246B5059002432C0 /* Models */,
 				93AB295A246B504F002432C0 /* ViewControllers */,
@@ -104,6 +125,7 @@
 		93AB2958246B5023002432C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				93AB295E246B52D7002432C0 /* api */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -127,6 +149,8 @@
 		93AB295B246B5059002432C0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93AB2966246B5885002432C0 /* Network */,
+				93AB2976246B8B95002432C0 /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,8 +158,78 @@
 		93AB295C246B5071002432C0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				93AB297A246B9083002432C0 /* Base */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		93AB295E246B52D7002432C0 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				93AB295F246B52E8002432C0 /* dev */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		93AB295F246B52E8002432C0 /* dev */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2960246B5319002432C0 /* API.plist */,
+			);
+			path = dev;
+			sourceTree = "<group>";
+		};
+		93AB2966246B5885002432C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2973246B6B34002432C0 /* Base */,
+				93AB2968246B589B002432C0 /* Response */,
+				93AB2967246B5894002432C0 /* Request */,
+				93AB296B246B5C4C002432C0 /* APIs.swift */,
+				93AB296D246B5FEF002432C0 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		93AB2967246B5894002432C0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				93AB296F246B61D8002432C0 /* LDARedditRequest.swift */,
+				93AB297E246BA233002432C0 /* LDARequestable.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		93AB2968246B589B002432C0 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2969246B599F002432C0 /* LDARedditResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		93AB2973246B6B34002432C0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2974246B6B45002432C0 /* LDAParameterizable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		93AB297A246B9083002432C0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93AB2978246B907C002432C0 /* LDARequestableViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		93AB297B246B92BC002432C0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				93AB297C246B92D0002432C0 /* LDAProgressHudUtil.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		AF265548FC222DA2400ACB3A /* Pods */ = {
@@ -208,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93AB294C246B42B4002432C0 /* LaunchScreen.storyboard in Resources */,
+				93AB2961246B5319002432C0 /* API.plist in Resources */,
 				93AB2949246B42B4002432C0 /* Assets.xcassets in Resources */,
 				93AB2947246B42B2002432C0 /* Main.storyboard in Resources */,
 			);
@@ -262,8 +357,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AB297D246B92D0002432C0 /* LDAProgressHudUtil.swift in Sources */,
+				93AB296E246B5FEF002432C0 /* NetworkManager.swift in Sources */,
+				93AB2979246B907C002432C0 /* LDARequestableViewModel.swift in Sources */,
 				93AB2944246B42B2002432C0 /* ViewController.swift in Sources */,
+				93AB2975246B6B45002432C0 /* LDAParameterizable.swift in Sources */,
+				93AB2977246B8B95002432C0 /* Article.swift in Sources */,
 				93AB2940246B42B2002432C0 /* AppDelegate.swift in Sources */,
+				93AB296A246B599F002432C0 /* LDARedditResponse.swift in Sources */,
+				93AB2970246B61D8002432C0 /* LDARedditRequest.swift in Sources */,
+				93AB297F246BA233002432C0 /* LDARequestable.swift in Sources */,
+				93AB296C246B5C4C002432C0 /* APIs.swift in Sources */,
 				93AB2942246B42B2002432C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
