@@ -12,15 +12,29 @@ class LDANewsDetailsViewController: UIViewController {
 
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsDetails: UILabel!
+    
     var newDetailsText = ""
     var navigationTitle = ""
+    var imageUrl : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.newsDetails.text = newDetailsText;
-        self.title = navigationTitle
+        setComponents()
     }
+    
+    func setComponents() {
+        self.title = navigationTitle
+        self.newsDetails.text = newDetailsText + newDetailsText + newDetailsText + newDetailsText;
+        if let imageUrl = self.imageUrl {
+            //TODO: load image
+        } else {
+            self.newsImage.removeFromSuperview()
+        }
+        
+        
+    }
+    
+
     
 
     /*

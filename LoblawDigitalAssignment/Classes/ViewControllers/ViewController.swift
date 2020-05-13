@@ -12,63 +12,85 @@ import MBProgressHUD
 class ViewController: UIViewController {
     
     @IBOutlet weak var newsTable: UITableView!
-    var news = ["news1", "news2", "new3", "new4", "news5"]
-    var newsDetails = ["Des1", "Des1", "Des3", "Des4","Des5"]
     
-//    var progressHd: MBProgressHUD?
-//    var redditListviewModel: LDARedditListViewModel?
+    var newsDetails = [LDANewsDetails]()
+    var redditListviewModel: LDARedditListViewModel?
+    var thumbnailImages = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-//        print(APIs.DOMAIN)
-//        print(APIs.SWIFT_API)
-//        print(APIs.DATA_FORMAT)
-//
-//        print("Calling")
-////        let req = LDARedditRequest()
-////        LDAProgressHudUtil.showProgressHuD(context: self, animated: true)
-////        req.request(param: nil, onSucceeded: dataLoaded(data:), onFailed: dataFailed(error:))
-//        initiateViewModels()
-        
-        
-        
+        setupNotificationSubscription()
+        instantiateViewModels()
     }
     
-//    func initiateViewModels() {
-//        self.redditListviewModel = LDARedditListViewModel();
-//        redditListviewModel?.requestRedditList()
-//    }
-//
-//    func dataLoaded(data: LDARedditResponse) {
-//        print("Data loaded success")
-//        LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: false)
-//    }
-//    func dataFailed(error: NSError?) {
-//        print("FAILED")
-//        LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: false)
-//    }
-
-
+    func setupNotificationSubscription() {
+        NotificationCenter.default.addObserver(self, selector: #selector(onDataFetchSuccess), name: NSNotification.Name(rawValue: Constants.NEWS_ARRIVED_SUCCESS), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDataFetchFailure), name: NSNotification.Name(rawValue: Constants.NEWS_ARRIVED_FAILED), object: nil)
+    }
+    
+    func instantiateViewModels() {
+        self.redditListviewModel = LDARedditListViewModel();
+        LDAProgressHudUtil.showProgressHuD(context: self, animated: true)
+        redditListviewModel!.requestRedditList()
+    }
+    
+    @objc func onDataFetchSuccess() {
+        self.newsDetails = self.redditListviewModel!.newsDetails
+        self.newsTable.reloadData()
+        LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: true)
+    }
+    
+    @objc func onDataFetchFailure() {
+        self.newsTable.reloadData()
+        LDAProgressHudUtil.hideAllProgressHuds(context: self, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeNoificationSubscriptions()
+    }
+    
+    func removeNoificationSubscriptions() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.NEWS_ARRIVED_SUCCESS), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.NEWS_ARRIVED_FAILED), object: nil)
+    }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    private func getDefaultCell(title : String) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        cell.textLabel?.text = title;
+        cell.textLabel?.numberOfLines = 0
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return newsDetails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newsTable.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? LDANewsTableViewCell
-        cell?.newsTitle.text = news[indexPath.row]
-        cell?.newsThumbnail.removeFromSuperview()
-        return cell!
+
+        if let imageURL = self.newsDetails[indexPath.row].thumbnail {
+            if imageURL != Constants.DEFAULT_IMAGE_LINK {
+                let cell = (newsTable.dequeueReusableCell(withIdentifier: Constants.NEWS_CELL, for: indexPath) as? LDANewsTableViewCell)!
+                cell.newsTitle.text = newsDetails[indexPath.row].title!
+                return cell
+            }
+        }
+        return getDefaultCell(title: newsDetails[indexPath.row].title!)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = (storyboard?.instantiateViewController(identifier: "LDANewsDetailsViewController") as? LDANewsDetailsViewController)!
-        detailVC.newDetailsText = self.newsDetails[indexPath.row]
-        detailVC.navigationTitle = self.news[indexPath.row]
+        let detailVC = (storyboard?.instantiateViewController(identifier: Constants.DETAILS_VIEW_CONTROLLER_ID) as? LDANewsDetailsViewController)!
+        detailVC.newDetailsText = ""
+        if let newsBody = self.newsDetails[indexPath.row].body?.replacingOccurrences(of: "\n", with: " ") {
+            detailVC.newDetailsText = newsBody
+        }
+        if let imageUrl = self.newsDetails[indexPath.row].thumbnail {
+            detailVC.imageUrl = imageUrl != Constants.DEFAULT_IMAGE_LINK ? imageUrl : nil
+        }
+        detailVC.navigationTitle = self.newsDetails[indexPath.row].title!
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
