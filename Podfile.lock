@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.1.0)
+  - MBProgressHUD (1.2.0)
+  - ObjectMapper (3.5.2)
+  - PubNub (4.13.1):
+    - PubNub/Core (= 4.13.1)
+  - PubNub/Core (4.13.1)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.1)
+  - MBProgressHUD (~> 1.2.0)
+  - ObjectMapper (~> 3.5)
+  - PubNub (~> 4)
+  - SDWebImage (~> 5.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MBProgressHUD
+    - ObjectMapper
+    - PubNub
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  PubNub: 818ec3a5277e86029afc9113440104701541dbf7
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: c67bac37361fce005ad2f30bae29e0137d1de3e6
+
+COCOAPODS: 1.9.1

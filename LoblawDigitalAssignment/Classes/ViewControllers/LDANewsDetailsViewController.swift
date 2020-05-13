@@ -24,7 +24,7 @@ class LDANewsDetailsViewController: UIViewController {
     
     func setComponents() {
         self.title = navigationTitle
-        self.newsDetails.text = newDetailsText + newDetailsText + newDetailsText + newDetailsText;
+        self.newsDetails.text = newDetailsText;
         if let imageUrl = self.imageUrl {
             self.newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: Constants.PLACEHOLDER_IMAGE))
         } else {
