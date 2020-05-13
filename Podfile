@@ -6,10 +6,8 @@ target 'LoblawDigitalAssignment' do
   use_frameworks!
 
   # Pods for LoblawDigitalAssignment
-  pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 5.1'
   pod 'MBProgressHUD', '~> 1.2.0'
-  pod 'PubNub', '~> 4'
   pod 'ObjectMapper', '~> 3.5'
   pod 'SDWebImage', '~> 5.0'
 
