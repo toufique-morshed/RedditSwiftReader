@@ -10,5 +10,6 @@ target 'LoblawDigitalAssignment' do
   pod 'Alamofire', '~> 5.1'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'PubNub', '~> 4'
+  pod 'ObjectMapper', '~> 3.5'
 
 end
